@@ -1,5 +1,9 @@
 
-This release is currently in **beta**.
+# This is an unofficial Terraform Provider for interacting with CyberArk Privilege Cloud Resources.
+# This is not production, or even development code. This should **only** be used in a test environment.
+
+
+This release is currently in **beta**. 
 
 Please see [Docs](/docs/index.md) for current supported resources and data providers
 
