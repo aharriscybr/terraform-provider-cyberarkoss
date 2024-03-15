@@ -39,7 +39,7 @@ type confModel struct {
 
 // Metadata returns the provider type name.
 func (p *cyberarkProvider) Metadata(_ context.Context, _ provider.MetadataRequest, resp *provider.MetadataResponse) {
-	resp.TypeName = "cyberark"
+	resp.TypeName = "cyberarkoss"
 	resp.Version = p.version
 }
 
