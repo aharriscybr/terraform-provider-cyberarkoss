@@ -1,3 +1,4 @@
+[![Release](https://github.com/aharriscybr/terraform-provider-cyberarkoss/actions/workflows/release.yml/badge.svg)](https://github.com/aharriscybr/terraform-provider-cyberarkoss/actions/workflows/release.yml)
 
 # This is an unofficial Terraform Provider for interacting with CyberArk Privilege Cloud Resources.
 # This is not production, or even development code. This should **only** be used in a test environment.
