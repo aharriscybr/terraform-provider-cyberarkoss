@@ -12,7 +12,7 @@ import (
 )
 
 //go:generate terraform fmt -recursive ./examples/
-//go:generate go run github.com/hashicorp/terraform-plugin-docs/cmd/tfplugindocs generate -provider-name cyberark
+//go:generate go run github.com/hashicorp/terraform-plugin-docs/cmd/tfplugindocs generate -provider-name cyberarkoss
 
 var (
 	version string = "1.0.0"
@@ -20,7 +20,7 @@ var (
 
 func main() {
 	opts := providerserver.ServeOpts{
-		Address: "registry.terraform.io/aharriscybr/cyberark",
+		Address: "registry.terraform.io/aharriscybr/cyberarkoss",
 		Debug:   false,
 	}
 
