@@ -38,25 +38,25 @@ resource "cyberarkoss_msaccount" "mskey" {
 
 ### Required
 
-- `address` (String) Required: URI, URL or IP associated with the credential.
-- `ms_appid` (String) Required: Microsoft Azure Application ID.
-- `ms_appobjid` (String) Required: Microsoft Azure Application Object ID.
-- `ms_keyid` (String) Required: Microsoft Azure Key ID.
-- `name` (String) Required: Custom Account Name for customizing the object name in a safe.
-- `platform` (String) Required: Management Platform associated with the Database Credential.
-- `safe` (String) Required: Target Safe where the credential object will be onboarded.
-- `secret` (String, Sensitive) Required: Password of the credential object.
-- `secrettype` (String) Required: Secret type of credential, should always be password unless working with AWS Keys.
-- `username` (String) Required: Username of the Credential object.
+- `address` (String) URI, URL or IP associated with the credential.
+- `ms_appid` (String) Microsoft Azure Application ID.
+- `ms_appobjid` (String) Microsoft Azure Application Object ID.
+- `ms_keyid` (String) Microsoft Azure Key ID.
+- `name` (String) Custom Account Name for customizing the object name in a safe.
+- `platform` (String) Management Platform associated with the Database Credential.
+- `safe` (String) Target Safe where the credential object will be onboarded.
+- `secret` (String, Sensitive) Password of the credential object.
+- `secrettype` (String) Secret type of credential, should always be password unless working with AWS Keys.
+- `username` (String) Username of the Credential object.
 
 ### Optional
 
-- `ms_adid` (String) Optional: Microsoft Azure Active Directory ID.
-- `ms_duration` (String) Optional: Duration.
-- `ms_keydesc` (String) Optional: Key Description.
-- `ms_pop` (String) Optional: Populate if not exist.
-- `sm_manage` (Boolean) Optional: Automatic Management of a credential. Optional Value.
-- `sm_manage_reason` (String) Optional: If sm_manage is false, provide reason why credential is not managed.
+- `ms_adid` (String) Microsoft Azure Active Directory ID.
+- `ms_duration` (String) Duration.
+- `ms_keydesc` (String) Key Description.
+- `ms_pop` (String) Populate if not exist.
+- `sm_manage` (Boolean) Automatic Management of a credential. Optional Value.
+- `sm_manage_reason` (String) If sm_manage is false, provide reason why credential is not managed.
 
 ### Read-Only
 
