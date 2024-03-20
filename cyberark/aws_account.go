@@ -38,7 +38,6 @@ func (r *awsAccountResource) Metadata(_ context.Context, req resource.MetadataRe
 
 type awsCredModel struct {
 	Name 		htypes.String `tfsdk:"name"`
-	Address 	htypes.String `tfsdk:"address"`
 	Username 	htypes.String `tfsdk:"username"`
 	Platform 	htypes.String `tfsdk:"platform"`
 	Safe 		htypes.String `tfsdk:"safe"`
