@@ -10,10 +10,8 @@ github.com/Masterminds/sprig/v3 v3.2.3/go.mod h1:rXcFaZ2zZbLRJv/xSysmlgIM1u11eBa
 github.com/Microsoft/go-winio v0.6.1 h1:9/kr64B9VUZrLm5YYwbGtUJnMgqWVOdUAXu6Migciow=
 github.com/ProtonMail/go-crypto v0.0.0-20230828082145-3c4c8a2d2371 h1:kkhsdkhsCvIsutKu5zLMgWtgh9YxGCNAw8Ad8hjwfYg=
 github.com/ProtonMail/go-crypto v0.0.0-20230828082145-3c4c8a2d2371/go.mod h1:EjAoLdwvbIOoOQr3ihjnSoLZRtE8azugULFRteWMNc0=
-github.com/aharriscybr/cybr-api v0.0.0-20240322152155-b0777bd1044c h1:EbHFaoFzwHQmvLYkQvSg7whNUtRiF48qf9NQme+Rtt0=
-github.com/aharriscybr/cybr-api v0.0.0-20240322152155-b0777bd1044c/go.mod h1:FNnUu2KW4PBMzuc8e+ONXMQ6nX0eJbEDVkejDk8k3KY=
-github.com/aharriscybr/cybr-api v0.0.0-20240322155755-4e9c74a52e08 h1:CQvlRnQ5+X2feolDb7NK318KlHFjWhIc+r7T8HlGh24=
-github.com/aharriscybr/cybr-api v0.0.0-20240322155755-4e9c74a52e08/go.mod h1:FNnUu2KW4PBMzuc8e+ONXMQ6nX0eJbEDVkejDk8k3KY=
+github.com/aharriscybr/cybr-api v0.0.0-20240322174025-ac2f527229db h1:ZemxDwfPvwy9vNzhZ3klQdF+PuMnz2jephU3ddzfLuo=
+github.com/aharriscybr/cybr-api v0.0.0-20240322174025-ac2f527229db/go.mod h1:FNnUu2KW4PBMzuc8e+ONXMQ6nX0eJbEDVkejDk8k3KY=
 github.com/apparentlymart/go-textseg/v15 v15.0.0 h1:uYvfpb3DyLSCGWnctWKGj857c6ew1u1fNQOlOtuGxQY=
 github.com/apparentlymart/go-textseg/v15 v15.0.0/go.mod h1:K8XmNZdhEBkdlyDdvbmmsvpAG721bKi0joRfFdHIWJ4=
 github.com/armon/go-radix v1.0.0 h1:F4z6KzEeeQIMeLFa97iZU6vupzoecKdU5TX24SNppXI=

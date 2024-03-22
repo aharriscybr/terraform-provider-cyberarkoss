@@ -166,7 +166,7 @@ func (r *safeObjectResource) Create(ctx context.Context, req resource.CreateRequ
 	}
 
 	if !plan.PermType.IsNull() {
-		if ( permission_level == "full" || permission_level == "read" || permission_level == "approver" || permission_level == "manager" ) { 
+		if ( plan.PermType.ValueString() == "full" || plan.PermType.ValueString() == "read" || plan.PermType.ValueString() == "approver" || plan.PermType.ValueString() == "manager" ) { 
 			permission_level = plan.PermType.ValueString()
 		} else {
 			tflog.Error(ctx, "Permission level does not match acceptable values.")
@@ -241,7 +241,34 @@ func (r *safeObjectResource) Create(ctx context.Context, req resource.CreateRequ
 // Refresh Existing State
 func (r *safeObjectResource) Read(ctx context.Context, req resource.ReadRequest, resp *resource.ReadResponse) {
 
-	tflog.Error(ctx, "Read has not been implemented.")
+	var currState safeObjectModel
+	diags := req.State.Get(ctx, &currState)
+	resp.Diagnostics.Append(diags...)
+	if resp.Diagnostics.HasError() {
+		return
+	}
+
+	newState, err := cybrapi.GetSafe(currState.ID.ValueStringPointer(), r.client.AuthToken, r.client.Domain)
+	if err != nil {
+		tflog.Error(ctx, "Unable to retrieve state from CyberArk API")
+	}
+
+	tflog.Info(ctx, "Refreshing state")
+
+	// Main Refresh Body
+	currState.Name = htypes.StringValue(*newState.Name)
+	currState.Description = htypes.StringValue(*newState.Description)
+	currState.CPM = htypes.StringValue(*newState.CPM)
+	currState.Location = htypes.StringValue(*newState.Location)
+	currState.RetentionDays = htypes.Int64Value(*newState.RetentionDays)
+	currState.PurgeEnabled = htypes.BoolValue(*newState.PurgeEnabled)
+	
+	// // Set last updated time to last refreshed time
+	currState.LastUpdated = htypes.StringValue(time.Now().Format(time.RFC850))
+
+	// Ensure ID is consistent
+	currState.ID = htypes.StringValue(*newState.URLID)
+	currState.IDNUM = htypes.Int64Value(*newState.NUMBER)
 
 }
 
