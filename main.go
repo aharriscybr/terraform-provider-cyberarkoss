@@ -7,7 +7,7 @@ import (
 	"log"
 
 	// CyberArk API
-	provider "github.com/aharriscybr/terraform-provider-cyberarkoss/cyberark"
+	provider "github.com/aharriscybr/terraform-provider-cyberarkoss/internal/cyberark"
 	"github.com/hashicorp/terraform-plugin-framework/providerserver"
 )
 
@@ -21,6 +21,7 @@ var (
 func main() {
 	opts := providerserver.ServeOpts{
 		Address: "registry.terraform.io/aharriscybr/cyberarkoss",
+		// Address: "local/aharriscybr/cyberarkoss",
 		Debug:   false,
 	}
 

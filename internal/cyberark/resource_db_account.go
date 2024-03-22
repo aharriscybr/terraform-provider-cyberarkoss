@@ -310,23 +310,5 @@ func (r *dbAccountResource) Update(ctx context.Context, req resource.UpdateReque
 
 // Delete deletes the resource and removes the Terraform state on success.
 func (r *dbAccountResource) Delete(ctx context.Context, req resource.DeleteRequest, resp *resource.DeleteResponse) {
-	
-		// Retrieve values from state
-		var state dbCredModel
-		diags := req.State.Get(ctx, &state)
-		resp.Diagnostics.Append(diags...)
-		if resp.Diagnostics.HasError() {
-			return
-		}
-	
-		id := state.ID.ValueString()
-
-		err := cybrapi.RemoveAccount(&id, r.client.AuthToken, r.client.Domain)
-		if err != nil {
-			tflog.Error(ctx, "Unable to remove account")
-			return
-		}
-
-		tflog.Info(ctx, "Successfully removed account")
-
+	tflog.Info(ctx, "Delete is not supported through terraform. Please consult with your CyberArk Administrator to process deleting this resource.")
 }
