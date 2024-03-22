@@ -3,7 +3,7 @@ module github.com/aharriscybr/terraform-provider-cyberarkoss
 go 1.20
 
 require (
-	github.com/aharriscybr/cybr-api v0.0.0-20240320204447-87e495ec79e6
+	github.com/aharriscybr/cybr-api v0.0.0-20240322174025-ac2f527229db
 	github.com/hashicorp/terraform-plugin-docs v0.18.0
 	github.com/hashicorp/terraform-plugin-framework v1.6.1
 	github.com/hashicorp/terraform-plugin-log v0.9.0

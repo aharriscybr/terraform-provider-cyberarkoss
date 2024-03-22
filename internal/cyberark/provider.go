@@ -129,6 +129,7 @@ func (p *cyberarkProvider) Resources(_ context.Context) []func() resource.Resour
 		NewDBAccountResource,
 		NewAWSAccountResource,
 		NewMSAccountResource,
+		NewSafeResource,
 	}
 	
 }
