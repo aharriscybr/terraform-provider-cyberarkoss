@@ -15,13 +15,12 @@ import (
 //go:generate go run github.com/hashicorp/terraform-plugin-docs/cmd/tfplugindocs generate -provider-name cyberarkoss
 
 var (
-	version string = "1.1.0"
+	version string = "2.0.0"
 )
 
 func main() {
 	opts := providerserver.ServeOpts{
 		Address: "registry.terraform.io/aharriscybr/cyberarkoss",
-		// Address: "local/aharriscybr/cyberarkoss",
 		Debug:   false,
 	}
 

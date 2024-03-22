@@ -245,7 +245,7 @@ func (r *awsAccountResource) Create(ctx context.Context, req resource.CreateRequ
 
 	if create == "" || len(create) == 0 {
 
-		tflog.Error(ctx, "Error catching ID, this means provisioning failed in pipeline. Please check logs and try again.")
+		tflog.Error(ctx, "Error catching ID, this means provisioning failed in pipeline. Please check debug logs and try again.")
 
 	} else {
 
