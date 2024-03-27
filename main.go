@@ -15,7 +15,7 @@ import (
 //go:generate go run github.com/hashicorp/terraform-plugin-docs/cmd/tfplugindocs generate -provider-name cyberarkoss
 
 var (
-	version string = "2.0.0"
+	version string = "2.1.0"
 )
 
 func main() {

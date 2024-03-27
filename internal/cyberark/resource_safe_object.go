@@ -275,7 +275,7 @@ func (r *safeObjectResource) Read(ctx context.Context, req resource.ReadRequest,
 
 // Update updates the resource and sets the updated Terraform state on success.
 func (r *safeObjectResource) Update(ctx context.Context, req resource.UpdateRequest, resp *resource.UpdateResponse) {
-	tflog.Error(ctx, "Update is not supported through terraform. Please consult with your CyberArk Administrator to process account property updates.")
+	tflog.Info(ctx, "Update is not supported through terraform. Please consult with your CyberArk Administrator to process account property updates.")
 }
 
 // Delete deletes the resource and removes the Terraform state on success.
